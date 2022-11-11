@@ -74,13 +74,17 @@ class UpdateProfileViewController: UIViewController {
     func getUserDocument(){
         let user = db.collection("users").document(Auth.auth().currentUser?.uid ?? "no-id")
         user.getDocument{ document, error in
+        
             if error == nil {
                 let data = document?.data()
-                self.txtBio.text = data!["bio"] as? String
-                self.tztName.text = data!["name"] as? String
-                self.txtEmail.text = data!["email"] as? String
-                self.txtUsername.text = data!["username"] as? String
-                self.imageFromUrl(url: data!["image"] as? String ?? "")
+                if data != nil {
+                    self.txtBio.text = data!["bio"] as? String
+                    self.tztName.text = data!["name"] as? String
+                    self.txtEmail.text = data!["email"] as? String
+                    self.txtUsername.text = data!["username"] as? String
+                    self.imageFromUrl(url: data!["image"] as? String ?? "")
+                }
+  
             }
         }
     }

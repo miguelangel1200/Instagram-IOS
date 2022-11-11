@@ -282,17 +282,85 @@
             </objects>
             <point key="canvasLocation" x="4093" y="433"/>
         </scene>
-        <!--View Controller-->
+        <!--Upload Post View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="instagram_Tecsup" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="UploadPostViewController" customModule="instagram_Tecsup" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9bb-xv-Wph">
+                                <rect key="frame" x="30" y="50" width="354" height="34"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IF0-FH-eOD">
+                                <rect key="frame" x="30" y="114" width="354" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Upload Image"/>
+                                <connections>
+                                    <action selector="onTapOnGalleryPost:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uQA-6Y-1m4"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xme-Ce-Huh">
+                                <rect key="frame" x="30" y="170" width="354" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="06T-if-ZVO"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="PPa-PC-bZE">
+                                <rect key="frame" x="30" y="410" width="354" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="u1I-Sm-vwd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BlR-5o-V3s">
+                                <rect key="frame" x="30" y="530" width="354" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="vcm-ct-Tys"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Save"/>
+                                <connections>
+                                    <action selector="onTapSavePostImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Uj-PM-89Z"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PPa-PC-bZE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="0VO-kU-u9v"/>
+                            <constraint firstItem="PPa-PC-bZE" firstAttribute="top" secondItem="xme-Ce-Huh" secondAttribute="bottom" constant="40" id="5MI-Z7-3II"/>
+                            <constraint firstItem="IF0-FH-eOD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6RK-at-0SG"/>
+                            <constraint firstItem="xme-Ce-Huh" firstAttribute="top" secondItem="IF0-FH-eOD" secondAttribute="bottom" constant="25" id="AFC-3F-nfS"/>
+                            <constraint firstItem="BlR-5o-V3s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="B0f-Fm-JIV"/>
+                            <constraint firstItem="xme-Ce-Huh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KQn-1z-3Wh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9bb-xv-Wph" secondAttribute="trailing" constant="30" id="Mvm-ce-oc0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IF0-FH-eOD" secondAttribute="trailing" constant="30" id="QlW-9Q-jRB"/>
+                            <constraint firstItem="9bb-xv-Wph" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RBP-Oc-GlL"/>
+                            <constraint firstItem="9bb-xv-Wph" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="RZ4-Ss-A3a"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xme-Ce-Huh" secondAttribute="trailing" constant="30" id="RdB-LP-VpY"/>
+                            <constraint firstItem="xme-Ce-Huh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="b71-5t-fcv"/>
+                            <constraint firstItem="IF0-FH-eOD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="dLb-hw-JVQ"/>
+                            <constraint firstItem="BlR-5o-V3s" firstAttribute="top" secondItem="PPa-PC-bZE" secondAttribute="bottom" constant="60" id="ejn-LK-TUb"/>
+                            <constraint firstItem="PPa-PC-bZE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="faF-cr-gBB"/>
+                            <constraint firstItem="IF0-FH-eOD" firstAttribute="top" secondItem="9bb-xv-Wph" secondAttribute="bottom" constant="30" id="mJm-e5-ZAr"/>
+                            <constraint firstItem="9bb-xv-Wph" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="o4l-6p-jGM"/>
+                            <constraint firstItem="BlR-5o-V3s" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="r3S-vJ-aK1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PPa-PC-bZE" secondAttribute="trailing" constant="30" id="vwS-uY-wU4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BlR-5o-V3s" secondAttribute="trailing" constant="30" id="zwh-q9-v4r"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="Tick-Square" id="w6V-1j-JCm"/>
+                    <connections>
+                        <outlet property="previeImage" destination="xme-Ce-Huh" id="Vxi-ZB-rxU"/>
+                        <outlet property="txtPostDescription" destination="PPa-PC-bZE" id="HZA-tC-ak9"/>
+                        <outlet property="txtTitlePost" destination="9bb-xv-Wph" id="zJJ-yH-WUr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

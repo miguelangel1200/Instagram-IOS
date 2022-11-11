@@ -18,6 +18,7 @@
 		DA8EE5E4290C1A5400868241 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = DA8EE5E3290C1A5400868241 /* FirebaseFirestore */; };
 		DA8EE5E6290C1A5400868241 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = DA8EE5E5290C1A5400868241 /* FirebaseStorage */; };
 		DA8EE5E8290C1FA000868241 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8EE5E7290C1FA000868241 /* LoginViewController.swift */; };
+		DA9346B9291ED61E00FCE8AC /* UploadPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9346B8291ED61E00FCE8AC /* UploadPostViewController.swift */; };
 		DAAABC8C28F9FBE900446774 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAABC8B28F9FBE900446774 /* AppDelegate.swift */; };
 		DAAABC8E28F9FBE900446774 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAABC8D28F9FBE900446774 /* SceneDelegate.swift */; };
 		DAAABC9028F9FBE900446774 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAABC8F28F9FBE900446774 /* ViewController.swift */; };
@@ -35,6 +36,7 @@
 		DA6F80A328FA145C00BEEC05 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		DA8EE5DC290C189900868241 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DA8EE5E7290C1FA000868241 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		DA9346B8291ED61E00FCE8AC /* UploadPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostViewController.swift; sourceTree = "<group>"; };
 		DAAABC8828F9FBE900446774 /* instagram-Tecsup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "instagram-Tecsup.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAAABC8B28F9FBE900446774 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAAABC8D28F9FBE900446774 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				DA8EE5E7290C1FA000868241 /* LoginViewController.swift */,
 				DA39F962290C464100EA2FE8 /* ProfileViewController.swift */,
 				DA580E172915AB0C0020ED13 /* UpdateProfileViewController.swift */,
+				DA9346B8291ED61E00FCE8AC /* UploadPostViewController.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 				DA8EE5E8290C1FA000868241 /* LoginViewController.swift in Sources */,
 				DA39F963290C464100EA2FE8 /* ProfileViewController.swift in Sources */,
 				DA580E182915AB0C0020ED13 /* UpdateProfileViewController.swift in Sources */,
+				DA9346B9291ED61E00FCE8AC /* UploadPostViewController.swift in Sources */,
 				DA39F961290C2F7100EA2FE8 /* Option.swift in Sources */,
 				DA6F80A428FA145C00BEEC05 /* SettingViewController.swift in Sources */,
 			);
